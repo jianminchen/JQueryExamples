@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+div {
+background-color:#bca;
+width:100px;
+border:1px solid green;
+}
+</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <button id="go">&raquo; Run</button>
+ 
+<div id="block">Hello!</div>
+<script>
+
+    /* Using multiple unit types within one animation. */
+
+    $("#go").click(function () {
+        $("#block").animate({
+            width: "70%",
+            opacity: 0.4,
+            marginLeft: "0.6in",
+            fontSize: "1em",
+            borderWidth: "2px"
+        }, 150);
+    });
+</script>
+ 
+</body>
+</html>

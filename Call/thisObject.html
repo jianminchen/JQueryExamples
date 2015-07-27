@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <script>
+    // A function invoked using Function.call()
+ 
+var myObject = {
+    sayHello: function() {
+        console.log( "Hi! My name is " + this.myName );
+    },
+    myName: "Rebecca"
+};
+ 
+var secondObject = {
+    myName: "Colin"
+};
+ 
+myObject.sayHello();                    // "Hi! My name is Rebecca"
+myObject.sayHello.call( secondObject ); // "Hi! My name is Colin"
+        </script>
+</body>
+</html>

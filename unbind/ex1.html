@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+button { margin:5px; }
+button#theone { color:red; background:yellow; }
+</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <button id="theone">Does nothing...</button>
+<button id="bind">Bind Click</button>
+<button id="unbind">Unbind Click</button>
+ 
+<div style="display:none;">Click!</div>
+<script>
+    function aClick() {
+        $("div").show().fadeOut("slow");
+    }
+    $("#bind").click(function () {
+        // could use .bind('click', aClick) instead but for variety...
+        $("#theone").click(aClick)
+          .text("Can Click!");
+    });
+    $("#unbind").click(function () {
+        $("#theone").unbind('click', aClick)
+          .text("Does nothing...");
+    });
+
+</script>
+ 
+</body>
+</html>

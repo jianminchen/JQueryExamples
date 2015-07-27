@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<div id="mySlideContent">
+	EXPANDING COLLAPSING DIV (slideContent)
+</div>
+<div id="mySlideToggler">
+	EXPANDING COLLAPSING DIV (slideToggler)
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#mySlideContent').css('display', 'none');
+        $('#mySlideToggler').click(function () {
+            $('#mySlideContent').slideToggle('slow');
+            $(this).toggleClass('slideSign');
+            return false;
+        });
+    });
+</script>

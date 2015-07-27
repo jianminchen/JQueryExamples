@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <div>
+    <label  >
+      <input type="radio" name="newsletter" value="Hot Fuzz"  />
+      <span visible="true" >name?</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="newsletter" value="Cold Fusion" />
+      <span>value?</span>
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="newsletter" value="Evil Plans" />
+      <span>value?</span>
+    </label>
+  </div>
+   <input style="display:none;" id="hiddeninputid" name="hiddeninputname" value="2" />
+<script>
+    $('input[value="Hot Fuzz"]').next().text(hiddeninputid.value);
+</script>
+ 
+</body>
+</html>

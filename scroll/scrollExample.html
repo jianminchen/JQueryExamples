@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>  
+          div { color:blue; } 
+          p { color:green; }  
+          span { color:red; display:none; }  
+
+      </style>  
+    
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+      </head>
+    <body>  
+          <div>Try scrolling the iframe.</div>  
+          <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+         <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+        <p>Paragraph - <span>Scroll happened!</span></p>
+          <script>
+           
+              $(window).scroll(function () {
+                  $("span").css("display", "inline").fadeOut("slow");
+              });
+
+          </script> 
+
+          </body>
+
+    </html>

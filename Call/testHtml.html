@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var myNamespace = {
+            myObject: {
+                sayHello: function () {
+                    console.log("Hi! My name is " + this.myName);
+                },
+                myName: "Rebecca"
+            }
+        };
+
+        var hello = myNamespace.myObject.sayHello;
+
+        hello(); // "Hi! My name is undefined"
+        </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <p>Hello</p>
+  <a href="#">Click to hide me too</a>
+  <p>Here is another paragraph</p>
+<script>
+    $("p").hide();
+    $("a").click(function (event) {
+        event.preventDefault();
+        $(this).hide();
+    });
+</script>
+ 
+</body>
+</html>

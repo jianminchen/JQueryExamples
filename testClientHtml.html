@@ -1,0 +1,22 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script type="text/javascript" language="javascript">
+            function GetEmail() {
+                alert('hi');
+            }
+        </script>
+
+    </head>
+    <body>
+    <form id="form1" runat="server">
+           Some control here
+    </form>
+</body>
+</html>
+
+<script runat="server">
+    protected void Page_Load(object sender, EventArgs e)
+    {
+ClientScript.RegisterClientScriptBlock(this.GetType(), "Email", "GetEmail();");
+}
+</script>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <script>
+        // A function created using Function.bind()
+
+        var myName = "the global object";
+        var sayHello = function () {
+            console.log("Hi! My name is " + this.myName);
+        };
+
+        var myObject = {
+            myName: "Rebecca"
+        };
+
+        var myObjectHello = sayHello.bind(myObject);
+
+        sayHello();      // "Hi! My name is the global object"
+        myObjectHello(); // "Hi! My name is Rebecca"
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+    <title>Julia testing div expand collapse</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+<h4 id="expanderHead" style="cursor:pointer;">
+	EXPANDING COLLAPSING DIV <span id="expanderSign">+</span>
+</h4>
+<div id="expanderContent" style="display:none">
+	content<br />
+	content<br />
+	content<br />
+	content<br />
+	content<br />
+</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#expanderHead").click(function () {
+                $("#expanderContent").slideToggle();
+                if ($("#expanderSign").text() == "+") {
+                    $("#expanderSign").html("−")
+                }
+                else {
+                    $("#expanderSign").text("+")
+                }
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  p { margin: 8px; font-size:16px; }
+  .selected { color:red; }
+  .highlight { background:yellow; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <p>Hello</p>
+  <p>and</p>
+  <p>Goodbye</p>
+<script>
+    $("p:last").addClass("selected highlight");
+    var x = "";
+    if (x) {
+        console.log("x defaulted to true");
+    } else {
+        console.log("x defaulted to false");
+        $("p").append("<li>" + "x defaulted to false" + "</li>");
+    }
+  </script>
+ 
+</body>
+</html>

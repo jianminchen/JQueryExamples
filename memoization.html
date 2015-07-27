@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function memoize(fundamental, cache) {
+            cache = cache || {};
+
+            var shell = function (arg) {
+
+                if (!cache.hasOwnProperty(arg)) {
+                    cache[arg] = fundamental(arg);
+                }
+
+                return cache[arg];
+            };
+            return shell;
+        }
+
+        function factorial(n) {
+            if (n == 0) return 1;
+            if (n == 1) return 1;
+            return n * factorial(n - 1); 
+        }
+
+
+        function memfactorial(n) {
+            if (!memfactorial.cache) {
+                memfactorial.cache = {
+                    "0": 1,
+                    "1": 1
+                };
+            }
+            if (!memfactorial.cache.hasOwnProperty(n)) {
+                memfactorial.cache[n] = n * memfactorial(n - 1);
+            }
+            return memfactorial.cache[n];
+        }
+
+        //memoize the factorial function
+        var memfactorialT = memoize(memfactorial, { "0": 1, "1": 1 });
+
+        //call the new function
+        var fact6 = memfactorialT(6);
+        var fact5 = memfactorialT(5);
+        var fact4 = memfactorialT(4);
+        </script>
+</body>
+</html>

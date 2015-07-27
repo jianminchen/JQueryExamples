@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div,span {
+    width: 100px;
+    height: 40px;
+    float:left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #EEEEEE;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+  <div class="myclass">div class="notMe"</div>
+ 
+  <div class="myclass otherclass">div class="myClass"</div>
+  <span class="myclass otherclass">span class="myClass"</span>
+<script>$(".myclass.otherclass").css("border", "13px solid red");</script>
+ 
+</body>
+</html>
